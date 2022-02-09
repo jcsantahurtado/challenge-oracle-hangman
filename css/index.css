@@ -1,61 +1,143 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-	background-color: #F3F5FC;
-	color: #000;
-	font-family: 'Roboto', sans-serif;
-}
-
-.container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 20px auto;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, auto);
-
-    grid-template-areas: "header"
-                        "content"
-                        "footer";
-}
-
-.container > div,
-.container .header,
-.container .content,
-.container .footer {
-    padding: 20px;
-    border-radius: 4px;
-
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    color: #333;
+    font-family: sans-serif;
     display: flex;
-    justify-content: center;
-}
+    flex-direction: column;
+	  background-color: #F3F5FC;
+    
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
 
-.container .header {
-    color: #000;
-    grid-area: header;
-}
-
-.container .content {
-	grid-area: content;
-}
-
-.container .content .form .btn {
-    border: 0;
-    color: white;
-    font-weight: bold;
-    background-color: blue;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 0.5em;
-}
-
-
-.container .footer {
+  main {
     text-align: center;
-	grid-area: footer;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .btn-iniciar-juego {
+    /* Button ppal */
+
+    display: block;
+
+    width: 317px;
+    height: 114px;
+
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+
+    margin-bottom: 20px;
+
+  }
+
+  #btn-agregar-continuar,
+  #btn-nuevo-juego {
+    /* Button */
+
+    width: 280px;
+    height: 67px;
+
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 24px;
+
+    margin-bottom: 20px;
+
+  }
+
+  .btn {
+    /* Button */
+
+    width: 280px;
+    height: 67px;
+
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    box-sizing: border-box;
+    border-radius: 24px;;
+
+    margin-bottom: 20px;
+
+  }
+
+  .text-input {	
+    border-radius: .5em;
+    border: 1px solid rgba(0, 0, 0, .0);
+    display: block;   /* Esto tiró los botonnes a la siguiente línea */
+    width: 100%;
+    height: 350px;
+    background-color: #F3F5FC;
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 150%;
+
+    /* identical to box height, or 48px */
+
+    /* Dark blue/dark-blue-300 */
+    color: #0A3871;
+
+  }
+
+  .ingresar-palabra > label {
+    display: block;
+
+    text-align: start;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+
+    /* identical to box height, or 18px */
+
+    /* Gray/gray-400 */
+    color: #495057;
+
+    opacity: 0.8;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 8px;
+    margin-bottom: 10px;
+  }
+
+  .jugar {
+    width: 100%;
+  }
+
+  #ahorcado {
+    *display: block;
+    margin-bottom: 15px;
+  }
+
+  .oculto {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
