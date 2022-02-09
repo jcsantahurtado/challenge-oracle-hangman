@@ -10,26 +10,27 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="header">
-            <section class="logo">
-                <img src="" alt="logo">
-            </section>
-        </header>
-        <main class="content">
-            <section class="form box">
-                <form action="">
-                    <button type="button" class="btn" id="btn-ini-juego">Iniciar juego</button>
-                    <button type="button" class="btn" id="btn-nueva-palabra">Agregar nueva palabra</button>
-                </form>
-            </section>
-        </main>
-        <footer class="footer">
-            <p>Author: Juan Santa<br>
-                <a href="https://app.aluracursos.com/user/jcsantahurtado">Aprendiz, alura LATAM</a>
-            </p>
-        </footer>
-    </div>
+    
+    <main>
+        <section class="index" style="text-align:center;">
+            <button class="btn-iniciar-juego" id="iniciar-juego">Iniciar juego</button>
+            <button class="btn" id="agregar-palabra">Agregar palabra</button>
+        </section>
+
+        <section class="ingresar-palabra" style="text-align:center;">
+            <textarea name="" class="text-input" id="input-nueva-palabra" placeholder="Escriba una nueva palabra"></textarea>
+            <label for="input-nueva-palabra">(!) Max. de ocho palabras</label>
+            <button class="btn-ppal" id="btn-agregar-continuar">Agregar y continuar</button>
+            <button class="btn" id="btn-cancelar">Cancelar</button>
+        </section>
+
+        <section class="jugar" style="text-align:center;">
+            <canvas id="ahorcado"></canvas>
+            <button class="btn-ppal" id="btn-nuevo-juego">Nuevo juego</button>
+            <button class="btn" id="btn-desistir">Desistir</button>
+        </section>
+    </main>
+
 </body>
 
 </html>
