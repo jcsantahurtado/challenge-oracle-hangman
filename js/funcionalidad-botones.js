@@ -9,6 +9,8 @@ var index = document.querySelector(".index");
 var agregarPalabra = document.querySelector(".ingresar-palabra");
 var jugar = document.querySelector(".jugar");
 
+var inputAuxiliar = document.querySelector("#input-teclado");
+
 //index.classList.add("oculto");
 agregarPalabra.classList.add("oculto");
 jugar.classList.add("oculto");
@@ -18,6 +20,8 @@ btnIniciarJuego.addEventListener("click", function (event) {
     jugar.classList.remove("oculto");
 
     nuevoJuego();
+
+    inputInvisible.focus();
 });
 
 btnIngresarPalabra.addEventListener("click", function (event) {
@@ -47,6 +51,8 @@ botonAgregarContinuar.addEventListener("click", function () {
 
         nuevoJuego();
 
+        inputInvisible.focus();
+
     } else {
         alert(errores[0]);
     }
@@ -61,7 +67,10 @@ btnRetroceso.addEventListener("click", function (event) {
 });
 
 btnNuevoJuego.addEventListener("click", function (event) {
+    
     nuevoJuego();
+
+    inputInvisible.focus();
 });
 
 btnDesistir.addEventListener("click", function (event) {
