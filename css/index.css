@@ -129,15 +129,21 @@
     width: 100%;
   }
 
+  .jugar > input {
+    width: 0px;
+    height: 0px;
+    background: #F3F5FC;
+    color: #F3F5FC;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+  }
+
   #ahorcado {
-    *display: block;
     margin-bottom: 15px;
   }
 
   .oculto {
     display: none;
-  }
-
-  .visible {
-    display: block;
   }
