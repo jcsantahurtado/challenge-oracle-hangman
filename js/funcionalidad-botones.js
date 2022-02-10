@@ -21,7 +21,7 @@ btnIniciarJuego.addEventListener("click", function (event) {
 
     nuevoJuego();
 
-    inputInvisible.focus();
+    inputAuxiliar.focus();
 });
 
 btnIngresarPalabra.addEventListener("click", function (event) {
@@ -51,7 +51,7 @@ botonAgregarContinuar.addEventListener("click", function () {
 
         nuevoJuego();
 
-        inputInvisible.focus();
+        inputAuxiliar.focus();
 
     } else {
         alert(errores[0]);
@@ -70,7 +70,7 @@ btnNuevoJuego.addEventListener("click", function (event) {
     
     nuevoJuego();
 
-    inputInvisible.focus();
+    inputAuxiliar.focus();
 });
 
 btnDesistir.addEventListener("click", function (event) {

@@ -25,6 +25,7 @@ var render = function () {
         mostrarFrase(context.canvas.width, context.canvas.height - 50, "Felicidades,", "30px Inter", "green");
         mostrarFrase(context.canvas.width, context.canvas.height, "Ganaste!", "30px Inter", "green");
         window.removeEventListener("keypress", checkKeyPress, false);
+        inputAuxiliar.focus();
     }
 };
 
@@ -121,6 +122,7 @@ function dibujarHorca(x, y) {
 
             mostrarFrase(context.canvas.width, context.canvas.height, "Fin del juego!", "30px Inter", "red");
             window.removeEventListener("keypress", checkKeyPress, false);
+            inputInvisible.blur();
         }
     }
 }
