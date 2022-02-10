@@ -9,7 +9,6 @@ var index = document.querySelector(".index");
 var agregarPalabra = document.querySelector(".ingresar-palabra");
 var jugar = document.querySelector(".jugar");
 
-var inputAuxiliar = document.querySelector("#input-teclado");
 
 //index.classList.add("oculto");
 agregarPalabra.classList.add("oculto");
@@ -33,21 +32,16 @@ botonAgregarContinuar.addEventListener("click", function () {
 
     var textArea = document.querySelector("#input-nueva-palabra");
     var palabraIngresar = textArea.value.toUpperCase();
-    console.log(palabraIngresar);
 
     errores = validarPalabra(palabraIngresar);
-    console.log(errores);
 
     if (errores.length == 0) {
         palabrasOcultas.push(palabraIngresar);
-        console.log(palabrasOcultas)
         alert("La palabra " + palabrasOcultas[palabrasOcultas.length - 1] + " fue agregada correctamete.");
         textArea.value = "";
 
         agregarPalabra.classList.add("oculto");
         jugar.classList.remove("oculto");
-
-        window.addEventListener("keypress", checkKeyPress, false);
 
         nuevoJuego();
 
@@ -63,7 +57,8 @@ btnRetroceso.addEventListener("click", function (event) {
     jugar.classList.add("oculto");
     index.classList.remove("oculto");
 
-    window.removeEventListener("keypress", checkKeyPress, false);
+    inputAuxiliar.removeEventListener("input", checkKeyPress, false);
+
 });
 
 btnNuevoJuego.addEventListener("click", function (event) {
@@ -78,5 +73,5 @@ btnDesistir.addEventListener("click", function (event) {
     jugar.classList.add("oculto");
     index.classList.remove("oculto");
 
-    window.removeEventListener("keypress", checkKeyPress, false);
+    inputAuxiliar.removeEventListener("input", checkKeyPress, false);
 }); 

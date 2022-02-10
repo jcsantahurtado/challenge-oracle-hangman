@@ -1,6 +1,8 @@
+var inputAuxiliar = document.querySelector("#input-teclado");
+
 function nuevoJuego() {
 
-    window.addEventListener("keypress", checkKeyPress, false);
+    inputAuxiliar.addEventListener("input", checkKeyPress, false);
 
     palabraOculta = palabraOcultaAlAzar();
 

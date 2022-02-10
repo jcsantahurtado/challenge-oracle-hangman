@@ -24,7 +24,7 @@ var render = function () {
     if (JSON.stringify(palabraOculta) === JSON.stringify(letrasIngresadas)) {
         mostrarFrase(context.canvas.width, context.canvas.height - 50, "Felicidades,", "30px Inter", "green");
         mostrarFrase(context.canvas.width, context.canvas.height, "Ganaste!", "30px Inter", "green");
-        window.removeEventListener("keypress", checkKeyPress, false);
+        inputAuxiliar.removeEventListener("input", checkKeyPress, false);
         inputAuxiliar.focus();
     }
 };
@@ -121,8 +121,8 @@ function dibujarHorca(x, y) {
             context.stroke();
 
             mostrarFrase(context.canvas.width, context.canvas.height, "Fin del juego!", "30px Inter", "red");
-            window.removeEventListener("keypress", checkKeyPress, false);
-            inputInvisible.blur();
+            inputAuxiliar.removeEventListener("input", checkKeyPress, false);
+            inputAuxiliar.blur();
         }
     }
 }

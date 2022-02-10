@@ -1,7 +1,6 @@
 var palabrasOcultas = ["ALURA", "ORACLE", "ONE", "JAVASCRIPT", "HTML", "CSS", "GIT", "GITHUB"];
 
 var palabraOculta = palabraOcultaAlAzar(palabrasOcultas);
-console.log("Las letras ocultas son:", palabraOculta);
 
 var letrasMalIngresadas = [];
 var contadorLetrasMalIngresadas = 0;
@@ -14,18 +13,15 @@ for (let i = 0; i < palabraOculta.length; i++) {
     letrasActual[i] = "";
 }
 
-console.log("Las letras ingresadas hasta el momentos son:", letrasIngresadas);
 
 function checkKeyPress(palabra) {
 
-    console.log(palabra.key);
-
-    tecla = palabra.key.toUpperCase();
+    tecla = this.value.toUpperCase();
+    inputAuxiliar.value = "";
 
     letraValida = soloLetras(tecla);
 
     if (letraValida) {
-        console.log("entra");
         alert("Solo letras...!");
 
     } else {
@@ -33,19 +29,15 @@ function checkKeyPress(palabra) {
         const expresion = new RegExp(tecla, "i");
 
         if (!expresion.test(palabraOculta)) {
-            console.log("La letra no está");
             contadorLetrasMalIngresadas += 1;
 
             if (!expresion.test(letrasMalIngresadas)) {
                 letrasMalIngresadas.push(tecla);
-                console.log("LETRAS MAL INGRESADAS", letrasMalIngresadas);
 
                 render();
             }
 
         } else {
-
-            console.log("La letra sí está");
 
             for (let i = 0; i < palabraOculta.length; i++) {
                 const element = palabraOculta[i];
@@ -53,13 +45,11 @@ function checkKeyPress(palabra) {
                 if (element == tecla) {
 
                     letraActual[i] = element;
-                    console.log("'ACTUAL'", letraActual);
 
                     if (letrasIngresadas[i] == "") {
                         letrasIngresadas[i] = element;
 
                         render();
-
                     }
 
                     letraActual[i] = "";
@@ -67,7 +57,4 @@ function checkKeyPress(palabra) {
             }
         }
     }
-
-    console.log("Las letras ingresadas hasta el momentos son:", letrasIngresadas);
-
 }
