@@ -17,6 +17,8 @@ function nuevoJuego() {
     letrasMalIngresadas = [];
 
     render();
+    inputAuxiliar.value = "";
+
 }
 
 function palabraOcultaAlAzar() {
